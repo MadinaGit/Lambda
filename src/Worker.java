@@ -1,10 +1,5 @@
 public class Worker {
 
-    @FunctionalInterface
-    public interface OnTaskDoneListener {
-        void onDone(String result);
-    }
-
     private OnTaskDoneListener callback;
     private OnTaskErrorListener errorCallback;
 
@@ -20,11 +15,6 @@ public class Worker {
             }
             callback.onDone("Task " + i + " is done");
         }
-    }
-
-    @FunctionalInterface
-    public interface OnTaskErrorListener {
-        void onError(String error);
     }
 }
 
